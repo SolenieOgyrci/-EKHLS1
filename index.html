@@ -210,6 +210,26 @@
             background: var(--green);
             border-radius: 8px;
             border: 1px solid var(--white);
+            text-align: center;
+        }
+        
+        .contact-button {
+            background: var(--green);
+            color: var(--white);
+            border: 2px solid var(--white);
+            padding: 0.8rem 1.5rem;
+            margin: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .contact-button:hover {
+            background: #026a35;
+            transform: translateY(-2px);
         }
         
         .matches-table {
@@ -326,6 +346,21 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
+        
+        .player-list {
+            background: var(--green);
+            border: 2px solid var(--white);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        
+        .player-item {
+            margin: 0.8rem 0;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
@@ -340,6 +375,7 @@
         <button class="nav-button" onclick="showPage('home')">ГЛАВНАЯ</button>
         <button class="nav-button" onclick="showPage('news')">НОВОСТИ</button>
         <button class="nav-button" onclick="showPage('match')">МАТЧ</button>
+        <button class="nav-button" onclick="showPage('roster')">СОСТАВ</button>
         <button class="nav-button" onclick="showPage('contacts')">КОНТАКТЫ</button>
     </div>
     
@@ -410,12 +446,39 @@
             </table>
         </div>
         
+        <div id="roster" class="page">
+            <h2>Наш состав 🏒</h2>
+            
+            <div class="player-list">
+                <div class="player-item">C | Gartik | ST | № 15</div>
+                <div class="player-item">| 1y2hdbi | DEF | № 99</div>
+                <div class="player-item">A | RIP_MOON2 | ST | № 1</div>
+                <div class="player-item">| Redris | DEF | № 42</div>
+                <div class="player-item">| ZXzGreafzXZ | DEF | № 17</div>
+                <div class="player-item">| BILAZ | GK | № 90</div>
+                <div class="player-item">| ererer_19991 | ST | № 30</div>
+                <div class="player-item">| Zxs_sava | ST | № 27</div>
+                <div class="player-item">| VIZI | ST | № 97</div>
+                <div class="player-item">| sfwr_x1zipe | GK | № 35</div>
+            </div>
+        </div>
+        
         <div id="contacts" class="page">
             <h2>Свяжись с нами! 📞</h2>
             <div class="contact-item">
                 <strong>Наш СММ</strong><br>
                 Telegram: @raha1m0mut
             </div>
+            
+            <div class="contact-item">
+                <a href="https://t.me/ekhlsalavat" class="contact-button" target="_blank">
+                    📢 ТГК Команды
+                </a>
+                <a href="https://t.me/+LYdLx3Vjw-A2ZGQy" class="contact-button" target="_blank">
+                    👨‍💻 ТГК Разработчиков
+                </a>
+            </div>
+            
             <div class="contact-item">
                 Есть идеи или хочешь с нами поиграть?<br>
                 Пиши - обсудим всё!

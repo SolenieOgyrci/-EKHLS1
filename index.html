@@ -70,9 +70,6 @@
             from { text-shadow: 0 0 2px rgba(255,255,255,0.3); }
             to { text-shadow: 0 0 8px rgba(255,255,255,0.8); }
         }
-
-
-        
         
         .small-text {
             font-size: 0.9rem;
@@ -157,7 +154,6 @@
             from { text-shadow: 0 0 5px rgba(255,255,255,0.5); }
             to { text-shadow: 0 0 15px rgba(255,255,255,0.8); }
         }
-
         
         .funny-message {
             font-size: 1.3rem;
@@ -224,8 +220,6 @@
             border-radius: 8px;
             overflow: hidden;
         }
-
-
         
         .matches-table th, 
         .matches-table td {
@@ -365,7 +359,7 @@
         <div id="news" class="page">
             <h2>Что у нас нового? 📰</h2>
             
-            <!-- ШАБЛОН ДЛЯ НОВОСТЕЙ -->
+            <!-- ШАБЛОН ДЛЯ НОВОСТЕЙ  -->
             <!--
             <div class="news-item">
                 <div class="news-date">Дата: ДД.ММ.ГГГГ ЧЧ:ММ МСК</div>
@@ -375,18 +369,12 @@
                 </div>
             </div>
             -->
+            
             <div class="news-item">
-                <div class="news-date">Дата: 09.11.2025 17:41 МСК</div>
-                <div class="news-title">Металлург 3:6 СЮ</div>
+                <div class="news-date">Дата: 09.11.2025 13:40 МСК</div>
+                <div class="news-title">Привет бета-тестер!</div>
                 <div class="news-content">
-                    В ходе товарищеского матча СЮ победил Металлург со счетом 3:6. MVP матча стал наш капитан, Gartik забивший целых 4 шайбы!
-                </div>
-                
-            <div class="news-item">
-                <div class="news-date">Дата: 09.11.2025 16:21 МСК</div>
-                <div class="news-title">Запуска сайта ХКСЮ!</div>
-                <div class="news-content">
-                    Добро пожаловать на сайт! Мы очень рады что вы посетили его, на его создание ушло ОЧЕНЬ много сил и стараний. Мы всегда готовы к предложениям! Пишите лично мне в ТГ (Юзернейм во вкладке "Контакты")
+                    Если ты видишь этот текст значит бета-тест проходит успешно, скинь пожалуйста скриншот этого окна мне (юз во вкладке "контакты")
                 </div>
             </div>
             
@@ -399,9 +387,9 @@
             <h2>Ближайший матч</h2>
             
             <div class="next-match">
-                
+                <div class="match-title">Скоро будет анонс!</div>
                 <div class="match-details">
-                    Здесь отображается ближайший матч!<br>
+                    Мы готовимся к следующему матчу<br>
                     Следи за новостями - скоро объявим соперника!
                 </div>
             </div>
@@ -414,10 +402,10 @@
                     <th>Статус</th>
                 </tr>
                 <tr>
-                    <td>09.11</td>
-                    <td>МЕТАЛЛУРГ (тов.)</td>
-                    <td>6:3</td>
-                    <td>Победа. MVP - Gartik (4 гола)</td>
+                    <td>Скоро</td>
+                    <td>Ждём анонса</td>
+                    <td>-:-</td>
+                    <td>Ожидается</td>
                 </tr>
             </table>
         </div>
@@ -476,13 +464,12 @@
             text: "Шанс того что ты увидишь этот текст 1 к 1000! Поздравляю тебя!"
         };
 
-        
+        // Счетчик кликов по логотипу
         let logoClickCount = 0;
         const clickCounterElement = document.getElementById('clickCounter');
 
         function handleLogoClick() {
             logoClickCount++;
-            
             
             if (logoClickCount === 1) {
                 clickCounterElement.style.opacity = '1';
@@ -491,7 +478,7 @@
             
             clickCounterElement.textContent = logoClickCount;
             
-            
+           
             clickCounterElement.style.transform = 'scale(1.2)';
             setTimeout(() => {
                 clickCounterElement.style.transform = 'scale(1)';
@@ -532,7 +519,7 @@
             titleElement.textContent = message.title;
             textElement.textContent = message.text;
             
-           
+            // КОД СПИЗЖЕН У ХКСЮ И REDRIS'A
             if (message === luckyMessage) {
                 titleElement.classList.add('lucky-text');
                 textElement.classList.add('lucky-text');
@@ -542,7 +529,7 @@
             }
         }
 
-        // Счетчик посещений
+        // Счетчик посещений КОД СПИЗЖЕН У ХКСЮ И REDRIS'A
         function updateVisitCounter() {
             const today = new Date().toDateString();
             let visitData = JSON.parse(localStorage.getItem('visitData') || '{}');
@@ -556,7 +543,7 @@
             document.getElementById('visitCount').textContent = visitData.count;
         }
 
-        
+        // Инициализация при загрузке
         document.addEventListener('DOMContentLoaded', () => {
             
             document.getElementById('footerText').textContent = getRandomFooterText();
@@ -576,6 +563,7 @@
     </script>
 </body>
 </html>
+
 
 
 

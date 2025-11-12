@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -413,35 +413,26 @@
     <div class="content">
         <div id="home" class="page active">
             <div class="welcome-message">
-                <div class="welcome-title" id="welcomeTitle"></div>
-                <div id="welcomeText"></div>
-                
+                <div class="welcome-title" id="welcomeTitle">Добро пожаловать!</div>
+                <div id="welcomeText">Приветствуем на официальном сайте ХК "Салават Юлаев" в EKHL!</div>
+            </div>
             
+            <div class="funny-message">
+                Добро пожаловать на официальный сайт ХК "Салават Юлаев" в EKHL! 🏒
+            </div>
+        </div>
         
         <div id="news" class="page">
             <h2>Что у нас нового? 📰</h2>
             
-            <!-- ШАБЛОН ДЛЯ НОВОСТЕЙ КОД СПИЗЖЕН У ХКСЮ И REDRIS'A -->
-            <!--
-            <div class="news-item">
-                <div class="news-date">Дата: ДД.ММ.ГГГГ ЧЧ:ММ МСК</div>
-                <div class="news-title">Заголовок новости</div>
-                <div class="news-content">
-                    Текст новости здесь. 
-                </div>
-            </div>
-            -->
-
             <div class="news-item">
                 <div class="news-date">Дата: 10.11.2025 18:20 МСК</div>
-                <div class="news-title">СЮ 4:3 "Спартак"<div>
+                <div class="news-title">СЮ 4:3 "Спартак"</div>
                 <div class="news-content">
                     Сегондя в ходе практической игры со "Спартаком" наша команда победила со счетом 4:3. Напомним что до этого СЮ ни разу не удалось одолеть "Спартак"
                 </div>
             </div>
 
-
-            
             <div class="news-item">
                 <div class="news-date">Дата: 10.11.2025 16:50 МСК</div>
                 <div class="news-title">Изменения в составе ХКСЮ</div>
@@ -450,7 +441,6 @@
                 </div>
             </div>
             
-              
             <div class="news-item">
                 <div class="news-date">Дата: 10.11.2025 9:45 МСК</div>
                 <div class="news-title">Обновление сайта для мобильных устройств</div>
@@ -458,9 +448,6 @@
                     Пользоавтели сайта с мобильных устройств! Теперь во вкладке "МАТЧ" вы можете листать таблицу (горизонтально). Это решения является исправлением ошибки отображения таблицы (подробнее в ТГК разработчиков сайта)
                 </div>
             </div>
-            
-            
-            
             
             <div class="news-item">
                 <div class="news-date">Дата: 09.11.2025 19:58 МСК</div>
@@ -477,10 +464,6 @@
                     К сожалению во время обновления сайта произошли тех. неполадки всвязи с которыми нам пришлось откатить версию сайта до Бета-теста. Не волнуйтесь! Изменения касаются только информации на сайте, весь остальной функционал сохранился! Если обнаружите ошибку сообщите! TG: @raha1m0mut
                 </div>
             </div>
-            
-            <div class="funny-message">
-                Новостей пока нету, но мы уже выехали в их поиск! 🚗💨
-            </div>
         </div>
         
         <div id="match" class="page">
@@ -494,7 +477,6 @@
                 </div>
             </div>
             
-            <!-- ОБЕРТКА ДЛЯ АДАПТИВНОЙ ТАБЛИЦЫ -->
             <div class="matches-container">
                 <table class="matches-table">
                     <tr>
@@ -552,7 +534,6 @@
         </div>
     </div>
 
-    <!-- Кнопка кликера в самом низу -->
     <div style="text-align: center; margin: 2rem 0;">
         <a href="https://solenieogyrci.github.io/SUWebClck/" class="clicker-button" target="_blank">
             🎮 Перейти в кликер
@@ -560,40 +541,10 @@
     </div>
     
     <div class="footer">
-        <div class="footer-text" id="footerText"></div>
+        <div class="footer-text">ХК "Салават Юлаев" © 2025 | Сайт сделан с душой ❤️</div>
     </div>
 
     <script>
-        // Случайные фразы для футера КОД СПИЗЖЕН У ХКСЮ И REDRIS'A
-        const footerTexts = [
-            "ХК \"Салават Юлаев\" © 2025 | Сайт сделан с душой ❤️",
-            "ХК \"Салават Юлаев\" © 2025 | Вперед Уфа!",
-            "ХК \"Салават Юлаев\" © 2025 | Динамо, не воруй",
-            "ХК \"Салават Юлаев\" © 2025 | Привет!",
-            "ХК \"Салават Юлаев\" © 2025",
-            "ХК \"Салават Юлаев\" © 2025 | EKHL",
-            "ХК \"Салават Юлаев\" © 2025 | =Р"
-        ];
-
-        // Случайные приветствия для главной страницы
-        const welcomeMessages = [
-            {
-                title: "Добро пожаловать!",
-                text: "Ты можешь нажать на кнопки выше чтобы перейти на другие страницы!"
-            },
-            {
-                title: "Welcome!",
-                text: "Приветствуем тебя на официальном сайте ХКСЮ из EKHL!"
-            }
-        ];
-
-        // Редкое сообщение (1/1000 шанс)
-        const luckyMessage = {
-            title: "Ты везунчик!",
-            text: "Шанс того что ты увидишь этот текст 1 к 1000! Поздравляю тебя!"
-        };
-
-        // Счетчик кликов по логотипу
         let logoClickCount = 0;
         const clickCounterElement = document.getElementById('clickCounter');
 
@@ -604,28 +555,12 @@
                 clickCounterElement.style.opacity = '1';
             }
             
-            
             clickCounterElement.textContent = logoClickCount;
             
-           
             clickCounterElement.style.transform = 'scale(1.2)';
             setTimeout(() => {
                 clickCounterElement.style.transform = 'scale(1)';
             }, 200);
-        }
-
-        function getRandomFooterText() {
-            const randomIndex = Math.floor(Math.random() * footerTexts.length);
-            return footerTexts[randomIndex];
-        }
-
-        function getRandomWelcomeMessage() {
-            // 1/1000 шанс получить редкое сообщение
-            if (Math.random() < 0.001) {
-                return luckyMessage;
-            }
-            const randomIndex = Math.floor(Math.random() * welcomeMessages.length);
-            return welcomeMessages[randomIndex];
         }
 
         function showPage(pageId) {
@@ -633,45 +568,9 @@
                 page.classList.remove('active');
             });
             document.getElementById(pageId).classList.add('active');
-            
-            
-            if (pageId === 'home') {
-                updateWelcomeText();
-            }
         }
 
-        function updateWelcomeText() {
-            const message = getRandomWelcomeMessage();
-            const titleElement = document.getElementById('welcomeTitle');
-            const textElement = document.getElementById('welcomeText');
-            
-            titleElement.textContent = message.title;
-            textElement.textContent = message.text;
-            
-            // КОД СПИЗЖЕН У ХКСЮ И REDRIS'A
-            if (message === luckyMessage) {
-                titleElement.classList.add('lucky-text');
-                textElement.classList.add('lucky-text');
-            } else {
-                titleElement.classList.remove('lucky-text');
-                textElement.classList.remove('lucky-text');
-            }
-        }
-
-        }
-
-        // Инициализация при загрузке
         document.addEventListener('DOMContentLoaded', () => {
-            
-            document.getElementById('footerText').textContent = getRandomFooterText();
-            
-            
-            updateWelcomeText();
-            
-            
-            updateVisitCounter();
-            
-            // Анимация кнопок
             const buttons = document.querySelectorAll('.nav-button');
             buttons.forEach((button, index) => {
                 button.style.animationDelay = `${index * 0.1}s`;
@@ -680,6 +579,7 @@
     </script>
 </body>
 </html>
+
 
 
 

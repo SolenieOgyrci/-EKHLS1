@@ -416,12 +416,7 @@
                 <div class="welcome-title" id="welcomeTitle"></div>
                 <div id="welcomeText"></div>
                 
-                <!-- Счетчик посещений -->
-                <div class="visitor-counter">
-                    <strong>👥 Посетителей сегодня:</strong> <span id="visitCount">1</span>
-                </div>
-            </div>
-        </div>
+            
         
         <div id="news" class="page">
             <h2>Что у нас нового? 📰</h2>
@@ -509,10 +504,10 @@
                         <th>Статус</th>
                     </tr>
                     <tr>
-                        <td>10.11</td>
-                        <td>ХК "Спартак" (ПРАК.)</td>
-                        <td>4:3</td>
-                        <td>Матч окончен. Победа.</td>
+                        <td>12.11</td>
+                        <td>Шанхай Дрэгонс</td>
+                        <td>-:-</td>
+                        <td>Ждем матча</td>
                     </tr>
                 </table>
             </div>
@@ -663,18 +658,6 @@
             }
         }
 
-        // Счетчик посещений КОД СПИЗЖЕН У ХКСЮ И REDRIS'A
-        function updateVisitCounter() {
-            const today = new Date().toDateString();
-            let visitData = JSON.parse(localStorage.getItem('visitData') || '{}');
-            
-            if (visitData.date !== today) {
-                visitData = { date: today, count: 0 };
-            }
-            
-            visitData.count++;
-            localStorage.setItem('visitData', JSON.stringify(visitData));
-            document.getElementById('visitCount').textContent = visitData.count;
         }
 
         // Инициализация при загрузке
@@ -697,6 +680,7 @@
     </script>
 </body>
 </html>
+
 
 
 
